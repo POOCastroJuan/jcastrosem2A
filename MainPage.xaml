@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="jcastrosem2A.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20">
+            <Label Text="Nombre del Estudiante" />
+            <Picker x:Name="pickerEstudiantes">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Andrea</x:String>
+                        <x:String>Carlos</x:String>
+                        <x:String>María</x:String>
+                        <x:String>Juan</x:String>
+                        <x:String>Sofía</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <!-- Notas Parcial 1 -->
+            <Label Text="Nota Seguimiento 1 (0.3)" />
+            <Entry x:Name="entryNS1" Keyboard="Numeric" />
+
+            <Label Text="Examen 1 (0.2)" />
+            <Entry x:Name="entryEX1" Keyboard="Numeric" />
+
+            <!-- Notas Parcial 2 -->
+            <Label Text="Nota Seguimiento 2 (0.3)" />
+            <Entry x:Name="entryNS2" Keyboard="Numeric" />
+
+            <Label Text="Examen 2 (0.2)" />
+            <Entry x:Name="entryEX2" Keyboard="Numeric" />
+
+            <Label Text="Fecha" />
+            <DatePicker x:Name="datePicker" />
+
+            <Button Text="Calcular Notas" Clicked="OnCalcularNotasClicked" />
+        </VerticalStackLayout>
+
+    </ScrollView>
+
+</ContentPage>
